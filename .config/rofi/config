@@ -118,7 +118,7 @@ rofi.matching:                       fuzzy
 ! "New style theme file" Set from: Default
 ! rofi.theme:                          
 !rofi.theme: /usr/share/rofi/themes/gruvbox-dark.rasi
-rofi.theme: /home/test/.config/rofi/gruvbox-dark.rasi
+rofi.theme: /home/chris/.config/rofi/gruvbox-dark.rasi
 ! "Color scheme for normal row" Set from: Default
 ! rofi.color-normal:                   
 ! "Color scheme for urgent row" Set from: Default
