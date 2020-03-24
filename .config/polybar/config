@@ -17,25 +17,7 @@
 ;==========================================================
 
 [colors]
-color0 = #282828
-color1 = #cc241d
-color2 = #98971a
-color3 = #d79921
-color4 = #458588
-color5 = #b16286
-color6 = #689d6a
-color7 = #a89984
-color8 = #928374
-color9 = #fb4934
-color10 = #b8bb26
-color11 = #fabd2f
-color12 = #83a598
-color13 = #d3869b
-color14 = #8ec07c
-color15 = #ebdbb2
-
-background = ${self.color0}
-foreground = ${self.color15}
+include-file = ~/.config/polybar/colors
 
 [bar/main]
 width = 100%
@@ -46,6 +28,7 @@ foreground = ${colors.foreground}
 
 font-0 = Input Mono:size=8;1
 font-1 = Siji;1
+font-2 = Font Awesome 5 Free:size=8:style=Solid;1
 
 line-size = 3
 line-color = ${colors.color8}
@@ -62,8 +45,8 @@ type = internal/bspwm
 
 format = <label-state> <label-mode>
 
-ws-icon-0 = 1;%{T2}%{T-}
-ws-icon-1 = 2;2
+ws-icon-0 = 1;%{T3}%{T-}
+ws-icon-1 = 2;%{T3}%{T-}
 ws-icon-2 = 3;3
 ws-icon-3 = 4;4
 ws-icon-4 = 5;5
@@ -126,12 +109,16 @@ bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground}
 
 label-muted-foreground = ${colors.color6}
-label-muted-font = 2
-label-muted = 
+;label-muted-font = 2
+;label-muted = 
+label-muted-font = 3
+label-muted = 
 
 ramp-volume-foreground = ${colors.color6}
-ramp-volume-font = 2
-ramp-volume-0 = 
+;ramp-volume-font = 2
+;ramp-volume-0 = 
+ramp-volume-font = 3
+ramp-volume-0 = 
 
 [module/wifi]
 type = internal/network
@@ -156,31 +143,27 @@ format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
 ramp-capacity-foreground = ${colors.color6}
-ramp-capacity-font = 2
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-5 = 
-ramp-capacity-6 = 
-ramp-capacity-7 = 
-ramp-capacity-8 = 
-ramp-capacity-9 = 
+;ramp-capacity-font = 2
+;ramp-capacity-0 = 
+;ramp-capacity-1 = 
+;ramp-capacity-2 = 
+;ramp-capacity-3 = 
+;ramp-capacity-4 = 
+;ramp-capacity-5 = 
+;ramp-capacity-6 = 
+;ramp-capacity-7 = 
+;ramp-capacity-8 = 
+;ramp-capacity-9 = 
+ramp-capacity-font = 3
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
 animation-charging-foreground = ${colors.color6}
 animation-charging-font = 2
 animation-charging-0 = 
-;animation-charging-0 = ${self.ramp-capacity-0}
-;animation-charging-1 = ${self.ramp-capacity-1}
-;animation-charging-2 = ${self.ramp-capacity-2}
-;animation-charging-3 = ${self.ramp-capacity-3}
-;animation-charging-4 = ${self.ramp-capacity-4}
-;animation-charging-5 = ${self.ramp-capacity-5}
-;animation-charging-6 = ${self.ramp-capacity-6}
-;animation-charging-7 = ${self.ramp-capacity-7}
-;animation-charging-8 = ${self.ramp-capacity-8}
-;animation-charging-9 = ${self.ramp-capacity-9}
 animation-charging-framerate = 1000
 
 [module/date]
@@ -192,7 +175,8 @@ time = %H:%M
 label = %date%, %time%
 label-foreground = ${colors.foreground}
 
-format = %{T2}%{T-} <label>
+;format = %{T2}%{T-} <label>
+format = %{T3}%{T-} <label>
 format-foreground = ${colors.color6}
 
 [module/weather]
@@ -201,7 +185,8 @@ type = custom/script
 exec = curl -s 'wttr.in/?format=%t,%20%C'
 interval = 3600
 
-format-prefix = %{T2}%{T-}
+;format-prefix = %{T2}%{T-}
+format-prefix = %{T3}%{T-}
 format-prefix-foreground = ${colors.color6}
 format-prefix-padding-right = 1
 
