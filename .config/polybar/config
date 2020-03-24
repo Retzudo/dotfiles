@@ -55,7 +55,7 @@ padding = 1
 
 modules-left = bspwm
 modules-center = title
-modules-right = sound wifi battery date
+modules-right = sound wifi battery date weather
 
 [module/bspwm]
 type = internal/bspwm
@@ -186,13 +186,23 @@ animation-charging-framerate = 1000
 [module/date]
 type = internal/date
 
-date = %Y-%m-%d
+date = %b %d
 time = %H:%M
 
-label = %date% %time%
+label = %date%, %time%
 label-foreground = ${colors.foreground}
 
 format = %{T2}%{T-} <label>
 format-foreground = ${colors.color6}
+
+[module/weather]
+type = custom/script
+
+exec = curl -s 'wttr.in/?format=%t,%20%C'
+interval = 3600
+
+format-prefix = %{T2}%{T-}
+format-prefix-foreground = ${colors.color6}
+format-prefix-padding-right = 1
 
 ; vim:ft=dosini

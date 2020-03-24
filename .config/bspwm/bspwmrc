@@ -9,7 +9,7 @@ polybar main &
 xsetroot -cursor_name left_ptr &
 ~/.fehbg &
 
-bspc monitor -d 1 2 3 4 5 5 6 7 8 9
+bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 bspc config normal_border_color \#272727
 bspc config active_border_color \#ebdbb2
